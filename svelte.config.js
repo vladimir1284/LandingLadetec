@@ -9,6 +9,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
+		prerender: {
+			handleMissingId: 'warn'
+		},
 		adapter: adapter({
 			pages: '',
 			assets: '',
@@ -17,7 +20,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: dev ? '' : '/ladetec',
+			base: dev ? '' : '',
 		}
 	}
 };
