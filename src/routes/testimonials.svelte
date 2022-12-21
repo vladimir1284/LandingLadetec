@@ -99,7 +99,7 @@
 				</div>
 				<!-- End testimonial item -->
 			</div>
-			<div class="swiper-pagination" />
+			<div class="swiper-pagination"></div>
 		</div>
 	</div>
 </section>

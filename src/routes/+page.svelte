@@ -40,7 +40,7 @@
 <Count />
 <Tabs />
 <Services />
-<!-- <Portfolio /> -->
+<Portfolio />
 <Testimonials />
 <Team />
 <Contact />
