@@ -3,14 +3,20 @@
 		<div class="row no-gutters">
 			<div class="content col-xl-5 d-flex align-items-stretch">
 				<div class="content">
-					<h3>From microwaves to radar product analysis</h3>
+					<!-- <h3>From microwaves to radar product analysis</h3>
 					<p>
 						For more than 30 years we have provided technological solutions
 						for weather radars, covering a wide range manufacturers. We 
 						have developed hardware and software products for radar networks 
 						in several countries.  
+					</p> -->
+					<h3>Desde las microondas hasta el aviso de fenómenos peligrosos</h3>
+					<p>
+						Por más de 30 años hemos proporcionado soluciones tecnológicas para radares meteorológicos, 
+						cubriendo una amplia gama de fabricantes. Nuestro trabajo ha impactado en el servicio 
+						meteorológico de varios países.
 					</p>
-					<a href="#" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right" /></a>
+					<a href="#" class="about-btn"><span>Conózcanos</span> <i class="bx bx-chevron-right" /></a>
 				</div>
 			</div>
 			<div class="col-xl-7 d-flex align-items-stretch">
