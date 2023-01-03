@@ -16,7 +16,7 @@
 						cubriendo una amplia gama de fabricantes. Nuestro trabajo ha impactado en el servicio 
 						meteorológico de varios países.
 					</p>
-					<a href="#" class="about-btn"><span>Conózcanos</span> <i class="bx bx-chevron-right" /></a>
+					<a href="#" class="about-btn"><span>Conócenos</span> <i class="bx bx-chevron-right" /></a>
 				</div>
 			</div>
 			<div class="col-xl-7 d-flex align-items-stretch">
@@ -24,27 +24,37 @@
 					<div class="row">
 						<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
 							<i class="bx bx-lock-open" />
-							<h4>Open source technology</h4>
+							<h4>Hardware y software abierto</h4>
 							<p>
-								We create and integrate open source hardware and software products
+								Creamos e integramos productos de hardware y software abierto
+								para la adquisición, el procesamiento y la visualización del 
+								dato de radar.
 							</p>
 						</div>
 						<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
 							<i class="bx bx-customize" />
-							<h4>Custom solutions</h4>
+							<h4>Soluciones a la medida</h4>
 							<p>
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+								El profundo conocimiento de la técnica de radar nos permite 
+								desarrollar soluciones que se adaptan a cualquier escenario.
 							</p>
 						</div>
 						<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-							<i class="bx bx-images" />
-							<h4>Labore consequatur</h4>
-							<p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+							<i class="bx bx-leaf" />
+							<h4>Sostenibilidad e independencia</h4>
+							<p>
+								Mantenemos funcionando radares instalados en los años 70's
+								adaptándonos a los cambios tecnológicos con independencia de
+								los fabricantes.
+							</p>
 						</div>
 						<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-							<i class="bx bx-shield" />
-							<h4>Beatae veritatis</h4>
-							<p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+							<i class="bx bx-timer" />
+							<h4>Soluciones rápidas y eficaces</h4>
+							<p>
+								Adoptamos un enfoque pragmático basado en nuestra experiencia
+								que nos permite brindar soluciones eficaces en tiempo record. 
+							</p>
 						</div>
 					</div>
 				</div>
