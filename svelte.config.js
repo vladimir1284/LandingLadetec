@@ -14,7 +14,7 @@ const config = {
 		},
 		adapter: adapter({
 			pages: '',
-			assets: '',
+			assets: 'static',
 			fallback: null,
 			precompress: false,
 			strict: true
