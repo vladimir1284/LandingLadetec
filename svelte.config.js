@@ -13,7 +13,7 @@ const config = {
 			handleMissingId: 'warn'
 		},
 		adapter: adapter({
-			pages: '',
+			pages: 'static',
 			assets: 'static',
 			fallback: null,
 			precompress: false,
@@ -24,5 +24,6 @@ const config = {
 		}
 	}
 };
+
 
 export default config;

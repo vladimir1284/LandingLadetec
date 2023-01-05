@@ -10,6 +10,11 @@
 	import Team from './team.svelte';
 	import Contact from './contact.svelte';
 	import Footer from './footer.svelte';
+
+	// import {onMount} from 'svelte'
+	// import {template} from './main'
+
+	// onMount(template);
 </script>
 
 <!-- ======= Header ======= -->

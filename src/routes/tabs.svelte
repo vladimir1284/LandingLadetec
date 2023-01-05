@@ -1,3 +1,7 @@
+<script lang="ts">
+	// import imgUrl from './img/Lineas1.Hardware.JPG'
+</script>
+
 <section id="tabs" class="tabs">
 	<div class="container" data-aos="fade-up">
 		<ul class="nav nav-tabs row d-flex">
@@ -70,7 +74,7 @@
 						data-aos="fade-up"
 						data-aos-delay="200"
 					>
-						<img src="img/Lineas1.Hardware.JPG" alt="" class="img-fluid" />
+						<img src='/img/Lineas1.Hardware.JPG' alt="" class="img-fluid" />
 					</div>
 				</div>
 			</div>
