@@ -4,7 +4,7 @@ import "./css/bootstrap.css";
 // import "./css/glightbox.css";
 import "./css/swiper-bundle.min.css";
 
-import 'bootstrap';
+// import 'bootstrap';
 
 
 import App from './App.svelte';

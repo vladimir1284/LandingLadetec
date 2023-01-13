@@ -1,8 +1,35 @@
 <script>
-	import Leaf from "@svicons/boxicons-regular/leaf.svelte";
-	import LockOpen from "@svicons/boxicons-regular/lock-open.svelte";
-	import Customize from "@svicons/boxicons-regular/customize.svelte";
-	import Timer from "@svicons/boxicons-regular/timer.svelte";
+	import Leaf from "svelte-material-icons/Leaf.svelte";
+	import LockOpen from "svelte-material-icons/LockOpen.svelte";
+	import LayersTripleOutline from "svelte-material-icons/LayersTripleOutline.svelte";
+	import Cog from "svelte-material-icons/CogOutline.svelte";
+
+	const about = {
+		title: "¿Qué nos distingue?",
+		body: "Por más de 30 años hemos brindado soluciones tecnológicas para radares meteorológicos, cubriendo una gran variedad de fabricantes. Hemos desarrollado productos de hardware y software para redes de radares en varios países.",
+	};
+	const highlights = [
+		{
+			icon: LayersTripleOutline,
+			title: "Integralidad",
+			body: "Soluciones integrales desde las microondas hasta el análisis de la información y el aviso de fenómenos peligrosos para cualquier tipo de radar.",
+		},
+		{
+			icon: Cog,
+			title: "Sostenibilidad",
+			body: "Soluciones sostenibles, flexibles y adaptativas ante los cambios tecnológicos que ocurren al paso del tiempo. Permiten la modificación y modernización continua y permanente del equipamiento.",
+		},
+		{
+			icon: LockOpen,
+			title: "Soberanía",
+			body: "Soluciones sostenibles, flexibles y adaptativas ante los cambios tecnológicos que ocurren al paso del tiempo. Permiten la modificación y modernización continua y permanente del equipamiento.",
+		},
+		{
+			icon: Leaf,
+			title: "Eficiencia",
+			body: "Soluciones energéticamente eficientes y eficaces en el logro de los objetivos.",
+		},
+	];
 </script>
 
 <section id="about" class="about section-bg">
@@ -18,14 +45,10 @@
 						in several countries.  
 					</p> -->
 					<h3>
-						Desde las microondas hasta el aviso de fenómenos
-						peligrosos
+						{about.title}
 					</h3>
 					<p>
-						Por más de 30 años hemos proporcionado soluciones
-						tecnológicas para radares meteorológicos, cubriendo una
-						amplia gama de fabricantes. Nuestro trabajo ha impactado
-						en el servicio meteorológico de varios países.
+						{about.body}
 					</p>
 					<a href="/#" class="about-btn"
 						><span>Conócenos</span>
@@ -38,7 +61,27 @@
 					class="icon-boxes d-flex flex-column justify-content-center"
 				>
 					<div class="row">
-						<div
+						{#each highlights as highlight, index}
+							<div
+								class="col-md-6 icon-box"
+								data-aos="fade-up"
+								data-aos-delay={100 * (index + 1)}
+							>
+								<i class="bx">
+									<svelte:component
+										this={highlight.icon}
+										width="1em"
+										height="1em"
+										color="#e03a3c"
+									/>
+								</i>
+								<h4>{highlight.title}</h4>
+								<p>
+									{highlight.body}
+								</p>
+							</div>
+						{/each}
+						<!-- <div
 							class="col-md-6 icon-box"
 							data-aos="fade-up"
 							data-aos-delay="100"
@@ -99,7 +142,7 @@
 								nuestra experiencia que nos permite brindar
 								soluciones eficaces en tiempo record.
 							</p>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<!-- End .content-->
