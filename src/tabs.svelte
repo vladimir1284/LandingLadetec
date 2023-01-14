@@ -1,4 +1,6 @@
 <script>
+	import ImageLoader from "./Image/ImageLoader.svelte";
+
 	import Cog from "svelte-material-icons/CogOutline.svelte";
 	import ApplicationBracesOutline from "svelte-material-icons/ApplicationBracesOutline.svelte";
 	import ChartAreaspline from "svelte-material-icons/ChartAreaspline.svelte";
@@ -131,7 +133,7 @@
 							data-aos="fade-up"
 							data-aos-delay="200"
 						>
-							<img src={tab.image} alt="" class="img-fluid" />
+							<ImageLoader src={tab.image} alt="" />
 						</div>
 					</div>
 				</div>

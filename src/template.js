@@ -3,37 +3,36 @@ import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css/bundle';
 import AOS from 'aos';
-var Isotope = require('isotope-layout');
 import PureCounter from '@srexi/purecounterjs';
+
+/**
+ * Easy selector helper function
+ */
+export const select = (el, all = false) => {
+el = el.trim()
+if (all) {
+    return [...document.querySelectorAll(el)]
+} else {
+    return document.querySelector(el)
+}
+}
+
+/**
+ * Easy event listener function
+ */
+export const on = (type, el, listener, all = false) => {
+let selectEl = select(el, all)
+if (selectEl) {
+    if (all) {
+    selectEl.forEach(e => e.addEventListener(type, listener))
+    } else {
+    selectEl.addEventListener(type, listener)
+    }
+}
+}
 
 export const template = function () {
   "use strict";
-
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
-  }
-
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
 
   /**
    * Easy on scroll event listener 
@@ -164,7 +163,7 @@ export const template = function () {
    */
   new Swiper('.clients-slider', {
     speed: 400,
-    loop: true,
+    rewind: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
@@ -196,37 +195,6 @@ export const template = function () {
   });
 
   /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-      });
-
-      let portfolioFilters = select('#portfolio-flters li', true);
-
-      on('click', '#portfolio-flters li', function (e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function (el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function () {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
-  });
-
-  /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
@@ -255,7 +223,7 @@ export const template = function () {
    */
   new Swiper('.testimonials-slider', {
     speed: 600,
-    loop: true,
+    rewind: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
