@@ -4,7 +4,7 @@
 
     export let src;
     export let alt;
-    export let css_class;
+    export let css_class = "";
 
     const dispatch = createEventDispatcher();
 

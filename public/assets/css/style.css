@@ -1246,7 +1246,7 @@ section {
 --------------------------------------------------------------*/
 .team .member {
   margin-bottom: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 5px;
   background: #fff;
 }

@@ -1,5 +1,9 @@
 <script>
     import ImageLoader from "./Image/ImageLoader.svelte";
+
+    import Plus from "svelte-material-icons/Plus.svelte";
+    import Link from "svelte-material-icons/Link.svelte";
+
     import { on, select } from "./template";
 
     var Isotope = require("isotope-layout");
@@ -35,6 +39,24 @@
             );
         }
     }
+
+    const items = [
+        {
+            image: "assets/img/portfolio/portfolio-1.jpg",
+            title: "App 1",
+            category: "App",
+        },
+        {
+            image: "assets/img/portfolio/portfolio-2.jpg",
+            title: "Web 1",
+            category: "Web",
+        },
+        {
+            image: "assets/img/portfolio/portfolio-3.jpg",
+            title: "Web 2",
+            category: "Web",
+        },
+    ];
 </script>
 
 <section id="portfolio" class="portfolio">
@@ -65,80 +87,40 @@
             data-aos-delay="200"
             style="height: 230px;"
         >
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                    <ImageLoader
-                        on:load={onload}
-                        src={"assets/img/portfolio/portfolio-1.jpg"}
-                        alt=""
-                    />
-                    <div class="portfolio-info">
-                        <h4>App 1</h4>
-                        <p>App</p>
-                        <div class="portfolio-links">
-                            <a
-                                href="assets/img/portfolio/portfolio-1.jpg"
-                                data-gallery="portfolioGallery"
-                                class="portfolio-lightbox"
-                                title="App 1"><i class="bx bx-plus" /></a
-                            >
-                            <a href="/#" title="More Details"
-                                ><i class="bx bx-link" /></a
-                            >
+            {#each items as item}
+                <div
+                    class="col-lg-4 col-md-6 portfolio-item filter-{item.category.toLowerCase()}"
+                >
+                    <div class="portfolio-wrap">
+                        <ImageLoader
+                            on:load={onload}
+                            src={item.image}
+                            alt=""
+                            css_class={"img-fluid"}
+                        />
+                        <div class="portfolio-info">
+                            <h4>{item.title}</h4>
+                            <p>{item.category}</p>
+                            <div class="portfolio-links">
+                                <a
+                                    href="assets/img/portfolio/portfolio-1.jpg"
+                                    data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox"
+                                    title="App 1"
+                                    ><i class="bx">
+                                        <Plus width="1em" height="1em" />
+                                    </i></a
+                                >
+                                <a href="/#" title="More Details"
+                                    ><i class="bx">
+                                        <Link width="1em" height="1em" />
+                                    </i></a
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <ImageLoader
-                        on:load={onload}
-                        src={"assets/img/portfolio/portfolio-2.jpg"}
-                        alt=""
-                    />
-                    <div class="portfolio-info">
-                        <h4>Web 3</h4>
-                        <p>Web</p>
-                        <div class="portfolio-links">
-                            <a
-                                href="assets/img/portfolio/portfolio-2.jpg"
-                                data-gallery="portfolioGallery"
-                                class="portfolio-lightbox"
-                                title="Web 3"><i class="bx bx-plus" /></a
-                            >
-                            <a href="/#" title="More Details"
-                                ><i class="bx bx-link" /></a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <ImageLoader
-                        on:load={onload}
-                        src={"assets/img/portfolio/portfolio-9.jpg"}
-                        alt=""
-                    />
-                    <div class="portfolio-info">
-                        <h4>Web 3</h4>
-                        <p>Web</p>
-                        <div class="portfolio-links">
-                            <a
-                                href="assets/img/portfolio/portfolio-9.jpg"
-                                data-gallery="portfolioGallery"
-                                class="portfolio-lightbox"
-                                title="Web 3"><i class="bx bx-plus" /></a
-                            >
-                            <a href="/#" title="More Details"
-                                ><i class="bx bx-link" /></a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {/each}
         </div>
     </div>
 </section>
