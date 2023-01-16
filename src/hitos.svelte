@@ -1,80 +1,146 @@
-<section id="hitos" class="services section-bg ">
+<script lang="ts">
+    import Arrow from "svelte-material-icons/GreaterThan.svelte";
+
+    import {
+        Timeline,
+        TimelineItem,
+        TimelineSeparator,
+        TimelineDot,
+        TimelineConnector,
+        TimelineContent,
+        TimelineOppositeContent,
+    } from "svelte-vertical-timeline";
+    import { onMount } from "svelte";
+
+    import data from "./data/hitos.json";
+
+    const hitos = data.hitos;
+
+    // Handle navigation
+    let items = [];
+    let loaded = false;
+
+    const visible_items = 3;
+
+    let index = 0;
+    let last_is_visible = false;
+    let fist_is_visible = true;
+
+    function handleDisplacement(index) {
+        console.log(index);
+        if (loaded) {
+            items = [];
+            for (let i = 0; i < visible_items; i++) {
+                if (i < hitos.length - index) {
+                    items.push(hitos[index + i]);
+                } else {
+                    break;
+                }
+            }
+            if (index > 0) {
+                fist_is_visible = false;
+            } else {
+                fist_is_visible = true;
+            }
+            if (index >= hitos.length - visible_items) {
+                last_is_visible = true;
+            } else {
+                last_is_visible = false;
+            }
+        }
+    }
+
+    function load() {
+        loaded = true;
+        console.log(hitos.length);
+        handleDisplacement(index);
+    }
+    $: {
+        handleDisplacement(index);
+    }
+    onMount(load);
+</script>
+
+<section id="services" class="services section-bg hitos">
     <div class="container" data-aos="fade-up">
         <div class="section-title">
-            <h2>Services</h2>
+            <h2>Hitos</h2>
             <p>
-                Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-                ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-                quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+                Desde el año 1983 los radares meteorológicos cubanos han
+                experimentado un constante y creciente proceso de innovación
+                tecnológica. Conozca los principales hitos protagonizados por el
+                Laboratorio de Desarrollo Técnico (LADETEC).
             </p>
         </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <i class="bi bi-briefcase" />
-                    <h4><a href="/#">Lorem Ipsum</a></h4>
-                    <p>
-                        Voluptatum deleniti atque corrupti quos dolores et quas
-                        molestias excepturi sint occaecati cupiditate non
-                        provident
-                    </p>
-                </div>
+        {#if !fist_is_visible}
+            <div class="timeline-up text-center">
+                <button
+                    class="control-btn"
+                    on:click={() => {
+                        index--;
+                    }}
+                >
+                    <Arrow width="3em" height="3em" />
+                </button>
             </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                    <i class="bi bi-card-checklist" />
-                    <h4><a href="/#">Dolor Sitema</a></h4>
-                    <p>
-                        Minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat tarad limino ata
-                    </p>
-                </div>
+        {/if}
+        <Timeline position="alternate">
+            {#each items as item}
+                <TimelineItem>
+                    <TimelineOppositeContent slot="opposite-content">
+                        <p style={"margin-top: -1px; color: #e03a3c;"}>
+                            {item.year}
+                        </p>
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                        <TimelineDot style={"background-color: #e03a3c;"} />
+                        <TimelineConnector
+                            style={"background-color: #e03a3c;"}
+                        />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                        <h3 style={"margin-top: -2px;"}>{item.title}</h3>
+                        <p style={"margin-top: -2px;"}>{item.body}</p>
+                    </TimelineContent>
+                </TimelineItem>
+            {/each}
+        </Timeline>
+        {#if !last_is_visible}
+            <div class="timeline-down text-center">
+                <button
+                    class="control-btn"
+                    on:click={() => {
+                        index++;
+                    }}
+                >
+                    <Arrow width="3em" height="3em" />
+                </button>
             </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                    <i class="bi bi-bar-chart" />
-                    <h4>
-                        <a href="/#">Sed ut perspiciatis</a>
-                    </h4>
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                    <i class="bi bi-binoculars" />
-                    <h4><a href="/#">Nemo Enim</a></h4>
-                    <p>
-                        Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
-                    <i class="bi bi-brightness-high" />
-                    <h4><a href="/#">Magni Dolore</a></h4>
-                    <p>
-                        At vero eos et accusamus et iusto odio dignissimos
-                        ducimus qui blanditiis praesentium voluptatum deleniti
-                        atque
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
-                    <i class="bi bi-calendar4-week" />
-                    <h4><a href="/#">Eiusmod Tempor</a></h4>
-                    <p>
-                        Et harum quidem rerum facilis est et expedita
-                        distinctio. Nam libero tempore, cum soluta nobis est
-                        eligendi
-                    </p>
-                </div>
-            </div>
+        {/if}
+        <div class="content">
+            <a
+                href="https://meteoradares.wordpress.com/2021/04/27/hitos-cubanos-en-la-actividad-de-los-radares-meteorologicos/"
+                class="hitos-btn"
+                ><span>Entrada del blog</span>
+                <i class="bx bx-chevron-right" /></a
+            >
         </div>
     </div>
 </section>
+
+<style>
+    .timeline-up {
+        transform: rotate(-90deg);
+    }
+    .timeline-down {
+        transform: rotate(90deg);
+    }
+    .control-btn {
+        background: transparent;
+        border: 0;
+        color: #e03a3c;
+    }
+    .control-btn:hover {
+        color: white;
+    }
+</style>

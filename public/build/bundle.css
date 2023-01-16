@@ -11221,6 +11221,14 @@ textarea.form-control-lg {
 }
 div.svelte-1c44y5p{width:100%;height:100%}
 img.svelte-1oaio5y{opacity:0;transition:opacity 1200ms ease-out}img.loaded.svelte-1oaio5y{opacity:1}
+.timeline.svelte-1qx6lg0{display:flex;flex-direction:column;padding:6px 16px;flex-grow:1}
+.alternate:nth-of-type(even) > .timeline-content{text-align:right}.alternate:nth-of-type(odd) > .timeline-opposite-content{text-align:right}.opposite-block.svelte-77d8h8{flex:1;margin:6px 16px}.timeline-item.svelte-77d8h8{list-style:none;display:flex;position:relative;min-height:70px}.left.svelte-77d8h8{flex-direction:row-reverse}.right.svelte-77d8h8{flex-direction:row}.alternate.svelte-77d8h8:nth-of-type(even){flex-direction:row-reverse}.alternate.svelte-77d8h8:nth-of-type(odd){flex-direction:row}
+.timeline-separator.svelte-6e6s8c{display:flex;flex-direction:column;flex:0;align-items:center}
+.timeline-dot.svelte-1ggf9p1{background-color:#121212;border:solid 2px #121212;display:flex;align-self:baseline;padding:4px;border-radius:50%;margin:11.5px 0}
+.timeline-connector.svelte-1usms3k{width:2px;background-color:#bdbdbd;flex-grow:1}
+.timeline-content.svelte-ov1kt8{margin:0;flex:1;margin:6px 16px}.left.svelte-ov1kt8{text-align:right}.right.svelte-ov1kt8{text-align:left}
+.timeline-opposite-content.svelte-r6jwvl{margin:0;flex:1;margin-right:auto;margin:6px 16px}.left.svelte-r6jwvl{text-align:left}.right.svelte-r6jwvl{text-align:right}
+.timeline-up.svelte-1jxwqo4{transform:rotate(-90deg)}.timeline-down.svelte-1jxwqo4{transform:rotate(90deg)}.control-btn.svelte-1jxwqo4{background:transparent;border:0;color:#e03a3c}.control-btn.svelte-1jxwqo4:hover{color:white}
 /**
  * Swiper 7.0.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
