@@ -20,7 +20,8 @@
     let items = [];
     let loaded = false;
 
-    const visible_items = 3;
+    const visible_items = 5;
+    const nav_step = 4;
 
     let index = 0;
     let last_is_visible = false;
@@ -29,7 +30,10 @@
     function handleDisplacement(index) {
         console.log(index);
         if (loaded) {
-            items = [];
+            items.length = 0;
+            if (hitos.length - index < visible_items) {
+                index = hitos.length - visible_items;
+            }
             for (let i = 0; i < visible_items; i++) {
                 if (i < hitos.length - index) {
                     items.push(hitos[index + i]);
@@ -77,40 +81,44 @@
                 <button
                     class="control-btn"
                     on:click={() => {
-                        index--;
+                        index -= nav_step;
                     }}
                 >
                     <Arrow width="3em" height="3em" />
                 </button>
             </div>
         {/if}
-        <Timeline position="alternate">
-            {#each items as item}
-                <TimelineItem>
-                    <TimelineOppositeContent slot="opposite-content">
-                        <p style={"margin-top: -1px; color: #e03a3c;"}>
-                            {item.year}
-                        </p>
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot style={"background-color: #e03a3c;"} />
-                        <TimelineConnector
-                            style={"background-color: #e03a3c;"}
-                        />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                        <h3 style={"margin-top: -2px;"}>{item.title}</h3>
-                        <p style={"margin-top: -2px;"}>{item.body}</p>
-                    </TimelineContent>
-                </TimelineItem>
-            {/each}
-        </Timeline>
+        <div class={last_is_visible ? "" : "fade-out"}>
+            <Timeline position="alternate">
+                {#each items as item}
+                    <TimelineItem>
+                        <TimelineOppositeContent slot="opposite-content">
+                            <p style={"margin-top: -1px; color: #e03a3c;"}>
+                                {item.year}
+                            </p>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                            <TimelineDot style={"background-color: #e03a3c;"} />
+                            <TimelineConnector
+                                style={"background-color: #e03a3c;"}
+                            />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <h5 style={"margin-top: -2px;"}>{item.title}</h5>
+                            <p class="small" style={"margin-top: -2px;"}>
+                                {item.body}
+                            </p>
+                        </TimelineContent>
+                    </TimelineItem>
+                {/each}
+            </Timeline>
+        </div>
         {#if !last_is_visible}
             <div class="timeline-down text-center">
                 <button
                     class="control-btn"
                     on:click={() => {
-                        index++;
+                        index += nav_step;
                     }}
                 >
                     <Arrow width="3em" height="3em" />
@@ -142,5 +150,20 @@
     }
     .control-btn:hover {
         color: white;
+    }
+    .fade-out:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 7em;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            #1b1b1b 70%
+        );
+        width: 100%;
+        height: 4em;
     }
 </style>

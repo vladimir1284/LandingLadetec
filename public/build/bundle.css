@@ -11228,7 +11228,11 @@ img.svelte-1oaio5y{opacity:0;transition:opacity 1200ms ease-out}img.loaded.svelt
 .timeline-connector.svelte-1usms3k{width:2px;background-color:#bdbdbd;flex-grow:1}
 .timeline-content.svelte-ov1kt8{margin:0;flex:1;margin:6px 16px}.left.svelte-ov1kt8{text-align:right}.right.svelte-ov1kt8{text-align:left}
 .timeline-opposite-content.svelte-r6jwvl{margin:0;flex:1;margin-right:auto;margin:6px 16px}.left.svelte-r6jwvl{text-align:left}.right.svelte-r6jwvl{text-align:right}
-.timeline-up.svelte-1jxwqo4{transform:rotate(-90deg)}.timeline-down.svelte-1jxwqo4{transform:rotate(90deg)}.control-btn.svelte-1jxwqo4{background:transparent;border:0;color:#e03a3c}.control-btn.svelte-1jxwqo4:hover{color:white}
+.timeline-up.svelte-tpmkk2{transform:rotate(-90deg)}.timeline-down.svelte-tpmkk2{transform:rotate(90deg)}.control-btn.svelte-tpmkk2{background:transparent;border:0;color:#e03a3c}.control-btn.svelte-tpmkk2:hover{color:white}.fade-out.svelte-tpmkk2:after{content:"";position:absolute;z-index:1;bottom:7em;left:0;pointer-events:none;background-image:linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            #1b1b1b 70%
+        );width:100%;height:4em}
 /**
  * Swiper 7.0.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
