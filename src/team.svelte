@@ -1,52 +1,11 @@
 <script>
     import ImageLoader from "./Image/ImageLoader.svelte";
 
-    import { Researchgate, Linkedin } from "svelte-simples";
+    import { Researchgate, Linkedin, Wordpress } from "svelte-simples";
 
-    const members = [
-        {
-            name: "Dr.C Orlando Rodríguez",
-            image: "assets/img/team/orlando.jpg",
-            linkedin:
-                "https://www.linkedin.com/in/orlando-l%C3%A1zaro-rodr%C3%ADguez-gonz%C3%A1lez-b5580082/",
-            researchgate:
-                "https://www.researchgate.net/profile/Orlando-Rodriguez-8",
-            position: "Director",
-        },
-        {
-            name: "Ms.C Leonardo L. Fernández",
-            image: "assets/img/team/leonardo.jpg",
-            researchgate:
-                "https://www.researchgate.net/profile/Leonardo-Fernandez-9",
-            position: "Especialista en Radiolocalización",
-        },
-        {
-            name: "Ing. Roberto Naranjo",
-            image: "assets/img/team/roberto.jpg",
-            researchgate:
-                "https://www.researchgate.net/profile/Roberto-Naranjo-3",
-            position: "Ingeniero electrónico",
-        },
-        {
-            name: "Ing. Arturo Alejandro Peña",
-            image: "assets/img/team/arturo.jpg",
-            position: "Ingeniero electrónico",
-        },
-        {
-            name: "Ing. Leonardo Gómez",
-            image: "assets/img/team/leo.jpg",
-            position: "Desarrollador de Software",
-        },
-        {
-            name: "Dr.C Vladímir Rodríguez",
-            image: "assets/img/team/vladimir.jpg",
-            linkedin:
-                "https://www.linkedin.com/in/vlad%C3%ADmir-rodr%C3%ADguez-diez-12a76649/",
-            researchgate:
-                "https://www.researchgate.net/profile/Vladimir-Rodriguez-2",
-            position: "Desarrollador de Software",
-        },
-    ];
+    import data from "./data/team.json";
+
+    const members = data.members;
 </script>
 
 <section id="team" class="team section-bg">
@@ -76,6 +35,14 @@
                                 {#if member.linkedin}
                                     <a href={member.linkedin}
                                         ><Linkedin
+                                            size="1em"
+                                            color="white"
+                                        /></a
+                                    >
+                                {/if}
+                                {#if member.wordpress}
+                                    <a href={member.wordpress}
+                                        ><Wordpress
                                             size="1em"
                                             color="white"
                                         /></a

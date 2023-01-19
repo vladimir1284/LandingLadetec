@@ -1,0 +1,43 @@
+{
+    "members": [{
+            "name": "Dr.C Orlando Rodríguez",
+            "image": "assets/img/team/orlando.jpg",
+            "wordpress": "https://meteoradares.wordpress.com/2022/07/26/confiteor-ego-sum-deficiendi-mea-culpa/",
+            "linkedin": "https://www.linkedin.com/in/orlando-l%C3%A1zaro-rodr%C3%ADguez-gonz%C3%A1lez-b5580082/",
+            "researchgate": "https://www.researchgate.net/profile/Orlando-Rodriguez-8",
+            "position": "Director"
+        },
+        {
+            "name": "Ms.C Leonardo L. Fernández",
+            "image": "assets/img/team/leonardo.jpg",
+            "wordpress": "https://meteoradares.wordpress.com/2012/01/13/hablando-de-monstruos-leonardo/",
+            "researchgate": "https://www.researchgate.net/profile/Leonardo-Fernandez-9",
+            "position": "Especialista en Radiolocalización"
+        },
+        {
+            "name": "Ing. Roberto Naranjo",
+            "image": "assets/img/team/roberto.jpg",
+            "wordpress": "https://meteoradares.wordpress.com/2012/01/19/hablando-de-monstruos-roberto/",
+            "researchgate": "https://www.researchgate.net/profile/Roberto-Naranjo-3",
+            "position": "Ingeniero electrónico"
+        },
+        {
+            "name": "Ing. Arturo Alejandro Peña",
+            "image": "assets/img/team/arturo.jpg",
+            "wordpress": "https://meteoradares.wordpress.com/2012/01/30/hablando-de-monstruos-arturo/",
+            "position": "Ingeniero electrónico"
+        },
+        {
+            "name": "Ing. Leonardo Gómez",
+            "image": "assets/img/team/leo.jpg",
+            "position": "Desarrollador de Software"
+        },
+        {
+            "name": "Dr.C Vladímir Rodríguez",
+            "image": "assets/img/team/vladimir.jpg",
+            "linkedin": "https://www.linkedin.com/in/vlad%C3%ADmir-rodr%C3%ADguez-diez-12a76649/",
+            "researchgate": "https://www.researchgate.net/profile/Vladimir-Rodriguez-2",
+            "position": "Desarrollador de Software"
+        }
+    ]
+}
