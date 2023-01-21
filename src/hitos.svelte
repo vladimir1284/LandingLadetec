@@ -85,9 +85,6 @@
         padding: 10px;
         max-height: 600px;
     }
-    .timeline::-webkit-scrollbar-track {
-        color: #93caed;
-    }
 
     /* card-tl container */
     .card-tl {

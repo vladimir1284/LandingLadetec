@@ -7,6 +7,10 @@
     import data from "./data/testimonials.json";
 
     const testimonials = data.testimonials;
+
+    testimonials.forEach((testimonial) => {
+        testimonial.fsize = Math.round(24 - testimonial.body.length / 27);
+    });
 </script>
 
 <section id="testimonials" class="testimonials">
@@ -37,24 +41,13 @@
                                 />
                                 <h3>{testimonial.name}</h3>
                                 <h4>{testimonial.position}</h4>
-                                <p>
-                                    <i
-                                        class="bx bxs-quote-alt-left quote-icon-left"
-                                    >
-                                        <QuoteOpen />
-                                    </i>
-                                    {testimonial.body}
-                                    <i
-                                        class="bx bxs-quote-alt-right quote-icon-right"
-                                    >
-                                        <QuoteClose />
-                                    </i>
+                                <p style="font-size: {testimonial.fsize}px">
+                                    "{testimonial.body}"
                                 </p>
                             </div>
                         </div>
                     </div>
                 {/each}
-                <!-- End testimonial item -->
             </div>
             <div class="swiper-pagination" />
         </div>
