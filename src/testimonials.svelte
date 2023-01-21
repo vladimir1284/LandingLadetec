@@ -1,6 +1,15 @@
 <script>
     import ImageLoader from "./Image/ImageLoader.svelte";
 
+    // Import Swiper Svelte components
+    import { Swiper, SwiperSlide } from "swiper/svelte";
+    // import Swiper required modules
+    import { Pagination, Autoplay } from "swiper";
+    // Import Swiper styles
+    import "swiper/css";
+    import "swiper/css/pagination";
+    import "swiper/css/autoplay";
+
     import QuoteClose from "svelte-material-icons/FormatQuoteClose.svelte";
     import QuoteOpen from "svelte-material-icons/FormatQuoteOpen.svelte";
 
@@ -8,6 +17,7 @@
 
     const testimonials = data.testimonials;
 
+    // Quote fontsize related to the body lenght
     testimonials.forEach((testimonial) => {
         testimonial.fsize = Math.round(24 - testimonial.body.length / 27);
     });
@@ -16,24 +26,41 @@
 <section id="testimonials" class="testimonials">
     <div class="container" data-aos="fade-up">
         <div class="section-title">
-            <h2>Testimonials</h2>
+            <h2>Testimonios</h2>
             <p>
-                Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-                ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-                quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+                Algunas personas con altas responsabilidades han comentado sobre
+                el trabajo de LADETEC en todos estos años. Tenemos demás el
+                honor de haber sido la casa y escuela de muchos excelentes
+                ingenieros que hoy trabajan por mundo.
             </p>
         </div>
+        <Swiper
+            modules={[Pagination, Autoplay]}
+            slidesPerView={"auto"}
+            autoplay={{ delay: 10000, disableOnInteraction: false }}
+            rewin={true}
+            speed={600}
+            pagination={{
+                type: "bullets",
+                clickable: true,
+            }}
+            breakpoints={{
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
 
-        <div
-            class="testimonials-slider swiper"
-            data-aos="fade-up"
-            data-aos-delay="100"
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            }}
         >
-            <div class="swiper-wrapper">
-                {#each testimonials as testimonial}
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
+            {#each testimonials as testimonial}
+                <SwiperSlide>
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <div class="test">
                                 <ImageLoader
                                     src={testimonial.image}
                                     alt=""
@@ -41,15 +68,20 @@
                                 />
                                 <h3>{testimonial.name}</h3>
                                 <h4>{testimonial.position}</h4>
-                                <p style="font-size: {testimonial.fsize}px">
-                                    "{testimonial.body}"
-                                </p>
                             </div>
+                            <p style="font-size: {testimonial.fsize}px">
+                                "{testimonial.body}"
+                            </p>
                         </div>
                     </div>
-                {/each}
-            </div>
-            <div class="swiper-pagination" />
-        </div>
+                </SwiperSlide>
+            {/each}
+        </Swiper>
     </div>
 </section>
+
+<style>
+    .test {
+        min-height: 90px;
+    }
+</style>
