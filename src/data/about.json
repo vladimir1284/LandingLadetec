@@ -1,0 +1,27 @@
+{
+    "header": {
+        "title": "¿Qué nos distingue?",
+        "body": "Por más de 30 años hemos brindado soluciones tecnológicas para radares meteorológicos, cubriendo una gran variedad de fabricantes. Hemos desarrollado productos de hardware y software para redes de radares en varios países."
+    },
+    "highlights": [{
+            "icon": "LayersTripleOutline",
+            "title": "Integralidad",
+            "body": "Soluciones integrales desde las microondas hasta el análisis de la información y el aviso de fenómenos peligrosos para cualquier tipo de radar."
+        },
+        {
+            "icon": "Cog",
+            "title": "Sostenibilidad",
+            "body": "Soluciones sostenibles, flexibles y adaptativas ante los cambios tecnológicos que ocurren al paso del tiempo. Permiten la modificación y modernización continua y permanente del equipamiento."
+        },
+        {
+            "icon": "LockOpen",
+            "title": "Soberanía",
+            "body": "Soluciones sostenibles, flexibles y adaptativas ante los cambios tecnológicos que ocurren al paso del tiempo. Permiten la modificación y modernización continua y permanente del equipamiento."
+        },
+        {
+            "icon": "Leaf",
+            "title": "Eficiencia",
+            "body": "Soluciones energéticamente eficientes y eficaces en el logro de los objetivos."
+        }
+    ]
+}

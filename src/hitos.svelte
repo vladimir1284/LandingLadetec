@@ -29,7 +29,7 @@
 </script>
 
 <section id="services" class="services section-bg hitos">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
         <div class="section-title pb-0">
             <h2>Hitos</h2>
             <p>
@@ -47,17 +47,19 @@
                 >
             </div>
         </div>
-        <div class="row {percent != 1 ? 'fade-out' : ''}">
+        <div class="row">
             <div
-                class="col-md-6 order-0 text-center my-auto"
-                data-aos="fade-up"
-                data-aos-delay="200"
+                class="col-lg-6 mt-3 mt-lg-0 align-self-center img text-center"
             >
-                <ImageLoader src={image} alt="" />
+                <ImageLoader src={image} alt="" css_class="my-auto img-fluid" />
             </div>
-
-            <div class="col-md-6">
-                <div on:scroll={handleScroll} class="timeline  overflow-auto">
+            <div class="col-lg-6 text-center pos">
+                <div
+                    on:scroll={handleScroll}
+                    class="timeline  overflow-auto {percent != 1
+                        ? 'fade-bottom'
+                        : ''}"
+                >
                     <div class="outer">
                         {#each hitos as item}
                             <div class="card-tl">
@@ -78,6 +80,29 @@
 </section>
 
 <style>
+    .img {
+        z-index: 1;
+        /* width: 100%; */
+    }
+    /* Shadow */
+    .fade-bottom:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0em;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            #1b1b1b 50%
+        );
+        width: 100%;
+        height: 4em;
+    }
+    .pos {
+        position: relative;
+    }
     /* Timeline Container */
     .timeline {
         background: var(--primary-color);
@@ -191,21 +216,5 @@
     /* setting dot to the right if the card-tl is odd */
     .card-tl:nth-child(even) > .info > .title::before {
         right: -25px;
-    }
-
-    .fade-out:after {
-        content: "";
-        position: absolute;
-        z-index: 1;
-        bottom: 0em;
-        left: 0;
-        pointer-events: none;
-        background-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0),
-            #1b1b1b 50%
-        );
-        width: 100%;
-        height: 4em;
     }
 </style>

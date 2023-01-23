@@ -1,9 +1,4 @@
 import GLightbox from 'glightbox';
-// import Swiper from 'swiper/bundle';
-// // import styles bundle
-// import 'swiper/css/bundle';
-import AOS from 'aos';
-import PureCounter from '@srexi/purecounterjs';
 
 /**
  * Easy selector helper function
@@ -158,45 +153,7 @@ export const template = function () {
       }
     }
   });
-  /**
-   * Clients Slider
-   */
-//   new Swiper('.clients-slider', {
-//     speed: 400,
-//     rewind: true,
-//     autoplay: {
-//       delay: 5000,
-//       disableOnInteraction: false
-//     },
-//     slidesPerView: 'auto',
-//     pagination: {
-//       el: '.swiper-pagination',
-//       type: 'bullets',
-//       clickable: true
-//     },
-//     breakpoints: {
-//       320: {
-//         slidesPerView: 2,
-//         spaceBetween: 40
-//       },
-//       480: {
-//         slidesPerView: 3,
-//         spaceBetween: 60
-//       },
-//       640: {
-//         slidesPerView: 4,
-//         spaceBetween: 80
-//       },
-//       992: {
-//         slidesPerView: 6,
-//         spaceBetween: 120
-//       }
-//     }
-//   });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
+  
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
@@ -218,51 +175,23 @@ export const template = function () {
 //     }
 //   });
 
-  /**
-   * Testimonials slider
-   */
-//   new Swiper('.testimonials-slider', {
-//     speed: 600,
-//     rewind: true,
-//     autoplay: {
-//       delay: 10000,
-//       disableOnInteraction: false
-//     },
-//     slidesPerView: 'auto',
-//     pagination: {
-//       el: '.swiper-pagination',
-//       type: 'bullets',
-//       clickable: true
-//     },
-//     breakpoints: {
-//       320: {
-//         slidesPerView: 1,
-//         spaceBetween: 20
-//       },
-
-//       1200: {
-//         slidesPerView: 3,
-//         spaceBetween: 20
-//       }
-//     }
-//   });
 
   /**
    * Animation on scroll
    */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
+//   window.addEventListener('load', () => {
+//     AOS.init({
+//       duration: 1000,
+//       easing: 'ease-in-out',
+//       once: true,
+//       mirror: false
+//     })
+//   });
 
   /**
    * Initiate Pure Counter 
    */
   // new PureCounter();
-  const pure = new PureCounter;
+//   const pure = new PureCounter;
 
 }

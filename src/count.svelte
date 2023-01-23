@@ -1,57 +1,79 @@
-<section id="counts" class="counts">
-	<div class="container" data-aos="fade-up">
-		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div class="count-box">
-					<i class="bi bi-emoji-smile" />
-					<span
-						data-purecounter-start="0"
-						data-purecounter-end="232"
-						data-purecounter-duration="1"
-						class="purecounter"
-					/>
-					<p>Happy Clients</p>
-				</div>
-			</div>
+<script>
+    import EmoticonHappy from "svelte-material-icons/EmoticonHappy.svelte";
+    import FileDocument from "svelte-material-icons/FileDocument.svelte";
+    import Headset from "svelte-material-icons/Headset.svelte";
+    import Group from "svelte-material-icons/Group.svelte";
 
-			<div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-				<div class="count-box">
-					<i class="bi bi-journal-richtext" />
-					<span
-						data-purecounter-start="0"
-						data-purecounter-end="521"
-						data-purecounter-duration="1"
-						class="purecounter"
-					/>
-					<p>Projects</p>
-				</div>
-			</div>
+    import { fly } from "svelte/transition";
+    import { inview } from "svelte-inview";
 
-			<div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-				<div class="count-box">
-					<i class="bi bi-headset" />
-					<span
-						data-purecounter-start="0"
-						data-purecounter-end="1463"
-						data-purecounter-duration="1"
-						class="purecounter"
-					/>
-					<p>Hours Of Support</p>
-				</div>
-			</div>
+    let isInView;
 
-			<div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-				<div class="count-box">
-					<i class="bi bi-people" />
-					<span
-						data-purecounter-start="0"
-						data-purecounter-end="15"
-						data-purecounter-duration="1"
-						class="purecounter"
-					/>
-					<p>Hard Workers</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    import Counter from "svelte-counter";
+
+    const items = [
+        {
+            count: { count: 232 },
+            icon: EmoticonHappy,
+            text: "Happy Clients",
+        },
+        {
+            count: { count: 521 },
+            icon: FileDocument,
+            text: "Projects",
+        },
+        {
+            count: { count: 1463 },
+            icon: Headset,
+            text: "Hours Of Support",
+        },
+        {
+            count: { count: 18 },
+            icon: Group,
+            text: "Hard Workers",
+        },
+    ];
+</script>
+
+<section
+    id="counts"
+    class="counts"
+    use:inview={{ unobserveOnEnter: true, rootMargin: "-20%" }}
+    on:change={({ detail }) => {
+        isInView = detail.inView;
+    }}
+>
+    {#if isInView}
+        <div class="container">
+            <div in:fly={{ y: 200, delay: 250, duration: 1000 }} class="row">
+                {#each items as item}
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bx">
+                                <svelte:component
+                                    this={item.icon}
+                                    width="1em"
+                                    height="1em"
+                                    color="#e03a3c"
+                                />
+                            </i>
+                            <Counter
+                                values={item.count}
+                                duration="1000"
+                                random="false"
+                                minspeed="10"
+                                let:counterResult
+                            >
+                                <span class="purecounter"
+                                    >{counterResult.count}</span
+                                >
+                            </Counter>
+
+                            <p>{item.text}</p>
+                        </div>
+                    </div>
+                {/each}
+            </div>
+        </div>
+    {/if}
 </section>

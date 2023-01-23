@@ -133,7 +133,11 @@
                             data-aos="fade-up"
                             data-aos-delay="200"
                         >
-                            <ImageLoader src={tab.image} alt="" />
+                            <ImageLoader
+                                src={tab.image}
+                                alt=""
+                                css_class="my-auto img-fluid"
+                            />
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,4 @@
-import "./css/aos.css";
 import "./css/bootstrap.css";
-
-// import 'bootstrap';
-
 
 import App from './App.svelte';
 
