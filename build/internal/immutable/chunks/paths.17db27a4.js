@@ -1,0 +1,1 @@
+var s;const e=((s=globalThis.__sveltekit_19l6ou7)==null?void 0:s.base)??"";var t;const a=((t=globalThis.__sveltekit_19l6ou7)==null?void 0:t.assets)??"https://ladetec.github.io/build";export{a,e as b};
