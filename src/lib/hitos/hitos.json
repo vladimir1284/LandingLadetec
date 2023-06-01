@@ -1,0 +1,123 @@
+{
+    "hitos": [{
+            "year": "1983",
+            "title": "Procesamiento de Objetos Meteorológicos",
+            "body": "Novedoso procesador DIGITAL de señales para radar, primero de su tipo en Cuba."
+        },
+        {
+            "year": "1988",
+            "title": "SISTEMA HERMES",
+            "body": "Sistema basado en PC para procesamiento de la información de radar meteorológico, con transmisión digital de la información."
+        },
+        {
+            "year": "1990",
+            "title": "Ladetec",
+            "body": "Creado el Laboratorio de Desarrollo Técnico por la Dra. Rosa Elena Simeón Negrín, a la sazón presidenta de la ACC, para dedicarse a la innovación tecnológica con alcance nacional."
+        },
+        {
+            "year": "1992",
+            "title": "OPERADOR AUTOMÁTICO",
+            "body": "Controlador automático para la operación total de un radar meteorológico."
+        },
+        {
+            "year": "1993",
+            "title": "ARGOS",
+            "body": "Sistema para adquirir señales, procesar la información volumétrica y controlar todas las operaciones de un radar meteorológico."
+        },
+        {
+            "year": "1993",
+            "title": "CRAILL",
+            "body": "Premio de la Academia de Ciencias y Premio Especial del Consejo de Estado por el trabajo denominado Complejo Radárico Automatizado para la Lluvia Provocada."
+        },
+        {
+            "year": "1997",
+            "title": "Automatización del radar MRL-5",
+            "body": "Primer radar MRL-5 en el mundo al que se le quitaron los mandos convencionales y se dejó solamente el mando automático computarizado."
+        },
+        {
+            "year": "1998",
+            "title": "Premio Relevante",
+            "body": "Premio Relevante en el XII Fórum Nacional de Ciencia y Técnica con la ponencia denominada MRL-5M: Radar Meteorológico Automático."
+        },
+        {
+            "year": "2000",
+            "title": "Operación remota",
+            "body": "En funcionamiento el primer radar en Cuba con operación automática y remota desde la red corporativa del Instituto de Meteorología."
+        },
+        {
+            "year": "2001",
+            "title": "Internet",
+            "body": "Por primera vez en Cuba se ponen en Internet las imágenes digitales de 3 radares meteorológicos automatizados, al paso del huracán Michelle."
+        },
+        {
+            "year": "2003",
+            "title": "CNR",
+            "body": "Creado el Centro Nacional de Radares, con sede en Camagüey."
+        },
+        {
+            "year": "2005",
+            "title": "METEOR 1500S",
+            "body": "Montado en Holguín, el primer radar Doppler en Cuba (METEOR 1500S), por ingenieros de Ladetec, sin participación del fabricante."
+        },
+        {
+            "year": "2006",
+            "title": "Red de radares",
+            "body": "Finaliza la automatización de los 7 radares del Instituto de Meteorología y la visualización de sus imágines en la web."
+        },
+        {
+            "year": "2006",
+            "title": "Orden Finlay",
+            "body": "El colectivo de ingenieros del Centro de Radares (Ladetec) obtuvo la Orden Finlay."
+        },
+        {
+            "year": "2006",
+            "title": "Premio Distinción Relevante",
+            "body": "Premio Distinción Relevante por su ponencia en el XV Foro Nacional de Ciencia y Técnica."
+        },
+        {
+            "year": "2007",
+            "title": "Premio del CITMA",
+            "body": "Premio Nacional a la Innovación Tecnológica y el Premio del CITMA al trabajo de mayor aporte medioambiental."
+        },
+        {
+            "year": "2010",
+            "title": "ORPG",
+            "body": "Asimilado en Cuba el software libre ORPG, empleado en los 159 radares WSR-88D del Servicio Meteorológico de los EE.UU."
+        },
+        {
+            "year": "2012",
+            "title": "RD-200SX",
+            "body": "Primer prototipo de radar Doppler cubano, RD-200SX en Camagüey, justo a tiempo para captar con él la Tormenta Tropical Isaac."
+        },
+        {
+            "year": "2015",
+            "title": "TITAN",
+            "body": "Asimilado en Cuba, el software TITAN, desarrollado por el Centro Nacional de Investigaciones Atmosféricas de los EE.UU."
+        },
+        {
+            "year": "2017",
+            "title": "Modificación de METEOR 1500S",
+            "body": "Modificación del radar METEOR 1500S de Gematronik en Holguín, para su trabajo con el sistema de control de los radares cubanos."
+        },
+        {
+            "year": "2018",
+            "title": "RD-100S",
+            "body": "Modernización del radar MRL-5M de Casa Blanca convirtiéndolo en el prototipo de radar RD-100S, con vistas al radar Doppler y Polarimétrico Cubano."
+        },
+        {
+            "year": "2022",
+            "title": "VESTA|Cíclope",
+            "body": "Se terminó la modernización Doppler del radar de Holguín con el procesador de señales cubano (VESTA|Cíclope)."
+        }
+    ],
+    "images": [
+        "assets/img/hitos/1983.jpg",
+        "assets/img/hitos/1992.jpg",
+        "assets/img/hitos/1998.jpg",
+        "assets/img/hitos/2003.jpg",
+        "assets/img/hitos/2006.jpg",
+        "assets/img/hitos/2014.jpg",
+        "assets/img/hitos/2015.jpg",
+        "assets/img/hitos/2020.jpg"
+    ]
+}
