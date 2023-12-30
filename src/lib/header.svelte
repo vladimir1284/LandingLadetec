@@ -1,6 +1,7 @@
 <script>
 	import Menu from 'svelte-material-icons/Menu.svelte';
 	import Close from 'svelte-material-icons/Close.svelte';
+	import Factory from 'svelte-material-icons/Factory.svelte';
 	import { base } from '$app/paths';
 
 	let icon = Menu;
@@ -60,4 +61,14 @@
 			</i>
 		</nav>
 	</div>
+	<a href="https://www.ladetec.com/pdl" class="float_end">
+		<Factory width="2.5em" height="2.5em" color="#e03a3c" />
+	</a>
 </header>
+
+<style>
+	.float_end {
+		float: right;
+		margin-right: 10px;
+	}
+</style>
